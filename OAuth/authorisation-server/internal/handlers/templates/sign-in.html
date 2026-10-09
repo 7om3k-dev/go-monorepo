@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="github.com/7om3k" />
+    <meta name=”title” content="Sign up" />
+    <meta name="description" content="Sign up page"/>
+    <meta name="language" content="english" />
+    <meta name="googlebot" content=”notranslate” />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<h1>
+    Sign in
+</h1>
+
+<!-- For more info about form creation, see - https://html.spec.whatwg.org/dev/forms.html#forms -->
+<form
+    method="post"
+    enctype="application/x-www-form-urlencoded"
+>
+    <!-- Todo: set action attribute on form to /approve endpoint -->
+    <!-- controls -->
+    <!-- Each part of a form is considered a paragraph and is typically separated from other parts using <p> elements. -->
+    <p>
+        <!-- When a form is submitted, invalid events are fired at each form control that is invalid. -->
+        <!-- Browser itself will only report one problem at a time -->
+        <label>Login: <input type="email" required></label>
+    </p>
+    <p>
+        <label>Password: <input type="password" required></label>
+    </p>
+    <!-- By default, button used in form is of type submit -->
+    <p><button>Log in</button></p>
+</form>
+</body>
+</html>
