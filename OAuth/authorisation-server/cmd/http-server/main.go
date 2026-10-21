@@ -12,6 +12,7 @@ func main() {
 
 	mux.HandleFunc("GET /authorise", handlers.Authorise)
 
-	log.Print("starting auth server")
-	log.Fatal(http.ListenAndServe(":3001", mux))
+	if err := http.ListenAndServe(":3001", mux); err != nil {
+		log.Fatal("Server failed to start:", err)
+	}
 }

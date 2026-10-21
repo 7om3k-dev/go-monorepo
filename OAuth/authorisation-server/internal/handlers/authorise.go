@@ -48,8 +48,10 @@ func Authorise(w http.ResponseWriter, r *http.Request) {
 
 	if clientDataErr != nil {
 		renderErrorPage(w)
-		// TODO: consider to send logs to leg-service with NATS
-	} else if !slices.Contains(clientData.RedirectUris, requestRedirectUri) {
+		return
+	}
+
+	if !slices.Contains(clientData.RedirectUris, requestRedirectUri) {
 		renderErrorPage(w)
 		return
 	}
